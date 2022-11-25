@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfHalloWereld.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfHalloWereld"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="332" Width="653">
+    <Grid Background="#FFE6E0A7" Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="359*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblHello" Content="Hallo! hoe is je naam?" HorizontalAlignment="Left" Margin="0,125,0,0" VerticalAlignment="Top" Background="{x:Null}" Grid.Column="2" Height="36" Width="188" FontSize="18"/>
+        <Button x:Name="BtnOk" Content="ok" HorizontalAlignment="Left" Margin="247,171,0,0" VerticalAlignment="Top" Grid.Column="2" Height="41" Width="59" FontSize="16" Click="BtnOk_Click"/>
+        <TextBox x:Name="txtNaam" HorizontalAlignment="Left" Margin="0,171,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="247" Grid.Column="2" Height="41" FontSize="14"/>
+        <Button x:Name="ResetBtn" Grid.Column="2" Content="Reset" HorizontalAlignment="Left" Margin="378,171,0,0" VerticalAlignment="Top" Height="41" Width="115" Click="Button_Click" FontSize="14"/>
+
+    </Grid>
+</Window>

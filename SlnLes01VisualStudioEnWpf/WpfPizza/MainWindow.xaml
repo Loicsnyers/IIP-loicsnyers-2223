@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfPizza.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPizza"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="265" Width="740">
+    <Grid Margin="0,0,0,-6" Background="#FFE2E6AE">
+        <Label  Content="BESTEL JE PIZZA" HorizontalAlignment="Left" Margin="25,46,0,0" VerticalAlignment="Top" Height="37" Width="140" FontSize="18"/>
+        <RadioButton x:Name="option1" Content="hot and spicy" GroupName="group1" HorizontalAlignment="Left" Margin="25,97,0,0" VerticalAlignment="Top" Checked="option1_Checked"/>
+        <RadioButton x:Name="option2" Content="4 seizoenen" GroupName="group1" HorizontalAlignment="Left" Margin="25,128,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.292,-0.465" Checked="option2_Checked"/>
+        <RadioButton x:Name="option3" Content="hawai" GroupName="group1" HorizontalAlignment="Left" Margin="25,158,0,0" VerticalAlignment="Top" Checked="option3_Checked"/>
+        <TextBlock x:Name="lblMessage" HorizontalAlignment="Left" Margin="247,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336" Height="51"/>
+        <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="100" Margin="520,79,0,0" VerticalAlignment="Top" Width="100"/>
+
+
+    </Grid>
+</Window>
