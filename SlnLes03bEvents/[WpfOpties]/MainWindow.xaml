@@ -1,0 +1,21 @@
+﻿<Window x:Class="_WpfOpties_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_WpfOpties_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350
+        " Width="600
+        ">
+    <Grid Background="#FFA6FCFF">
+        <Label x:Name="title" Content="Waar heb je ons leren kennen?" HorizontalAlignment="Left" Margin="53,42,0,0" VerticalAlignment="Top" Height="52" Width="275" FontSize="18"/>
+        <Image x:Name="checkMark" HorizontalAlignment="Left" Source="images/pijl.png" Height="56" Margin="328,38,0,0" VerticalAlignment="Top" Width="69" Visibility="Hidden"/>
+        <Label x:Name="onderTitel" Content="duid minstens een optie aan " HorizontalAlignment="Left" Margin="62,76,0,0" VerticalAlignment="Top" FontSize="14" FontStyle="Italic"/>
+        <CheckBox x:Name="box1" Content="gevonden via Google" HorizontalAlignment="Left" Margin="62,110,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
+        <CheckBox x:Name="box2" Content="via een kennis / vriend" HorizontalAlignment="Left" Margin="62,130,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
+        <CheckBox x:Name="box3" Content="andere, namelijk..." HorizontalAlignment="Left" Margin="62,150,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="75,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
