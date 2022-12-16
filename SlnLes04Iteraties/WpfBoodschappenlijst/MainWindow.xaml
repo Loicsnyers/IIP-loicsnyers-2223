@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfBoodschappenlijst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBoodschappenlijst"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="275" Width="300">
+    <Grid Background="#FFE6F0B0">
+        <ListBox x:Name="listBox" Width="150" Height="150" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="21,18,134,86" SelectionChanged="ListBox_SelectionChanged"/>
+        <TextBlock x:Name="result" HorizontalAlignment="Center" Margin="0,208,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="268"/>
+
+    </Grid>
+</Window>

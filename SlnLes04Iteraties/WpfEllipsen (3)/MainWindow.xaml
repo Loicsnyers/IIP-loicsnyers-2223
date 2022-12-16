@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfEllipsen__3_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfEllipsen__3_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas x:Name="canvas1" HorizontalAlignment="Center" Height="255" Margin="0,150,0,0" VerticalAlignment="Top" Width="712"/>
+        <Button x:Name="btnTekenen" Content="TEKENEN" HorizontalAlignment="Left" Margin="541,46,0,0" VerticalAlignment="Top" Width="138" Height="30" FontWeight="Bold" Click="btnTekenen_Click"/>
+        <Slider x:Name="totalEllipses" HorizontalAlignment="Left" Margin="150,32,0,0" VerticalAlignment="Top" Width="300" TickFrequency="1" IsSnapToTickEnabled="True" Minimum="0" Maximum="50" ValueChanged="Slider_ValueChanged"/>
+        <Slider x:Name="minSlider" HorizontalAlignment="Left" Margin="150,58,0,0" VerticalAlignment="Top" Width="300" TickFrequency="1" IsSnapToTickEnabled="True" Minimum="0" Maximum="50" ValueChanged="Slider_ValueChanged"/>
+        <Slider x:Name="maxSlider" HorizontalAlignment="Left" Margin="150,84,0,0" VerticalAlignment="Top" Width="300" TickFrequency="1" IsSnapToTickEnabled="True" Minimum="0" Maximum="50" ValueChanged="Slider_ValueChanged"/>
+        <Label Content="Aantal cirkels:" HorizontalAlignment="Left" Margin="24,28,0,0" VerticalAlignment="Top"/>
+        <Label Content="Minimum radius:" HorizontalAlignment="Left" Margin="24,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="Maximum radius:" HorizontalAlignment="Left" Margin="24,80,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="sliderTop" Content="0" HorizontalAlignment="Left" Margin="455,28,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="sliderMid" Content="0" HorizontalAlignment="Left" Margin="455,54,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="sliderBot" Content="0" HorizontalAlignment="Left" Margin="455,80,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="foutMelding" Content="" HorizontalAlignment="Left" Margin="381,111,0,0" VerticalAlignment="Top" Width="400"/>
+    </Grid>
+</Window>
