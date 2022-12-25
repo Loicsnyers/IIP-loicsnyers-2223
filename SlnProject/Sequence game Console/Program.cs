@@ -93,8 +93,8 @@ All rights and credit go directly to its rightful owners");
             Console.WriteLine();
             Console.Write($"Awesome choice {name} you have chosen for {generatedSounds} sounds!\nTo start the game, type 'ready' and press enter:");
 
-            string input = string.Empty;
-            while (input.Trim() != "ready") // when user did spacebar before ready, the console didn't clear so i used the input.trim .trim removes all leading and trailing whitespaces fro the current string
+            string input = string.Empty;  // input.trim removes all leading and trailing whitespaces from the current string
+            while (input.Trim() != "ready")
             {
                 input = Console.ReadLine().ToLower();
             }
@@ -141,6 +141,7 @@ All rights and credit go directly to its rightful owners");
                         laugh.PlaySync();
                         currentSound = i;
                         correctGuesses = i;
+                        i--;
                         Console.WriteLine();
                         Console.WriteLine($"you Lost, you guessed {correctGuesses} out of {generatedSounds} sounds. \npress enter to play again");
                         Console.ReadLine();
@@ -150,7 +151,7 @@ All rights and credit go directly to its rightful owners");
                     if (correctGuesses == generatedSounds)
                     {
                         Console.Clear();
-                        Console.WriteLine(@"         _nnnn_ 
+                        Console.WriteLine( @"         _nnnn_ 
         dGGGGMMb     ,"""""""""""""""""""""""""""".
        @p~qp~~qMb    |   You won  ! |
        M|@||@) M|   _;..............'
@@ -170,12 +171,13 @@ _)      \.___.,|     .'
                         SoundPlayer victory = new SoundPlayer(path);
                         victory.Load();
                         victory.PlaySync();
-                        Environment.Exit(0);
+                        Environment.Exit(0); // forces the console to close after victory sound is played
                     }
                 }
             }
         }
 
+        // static private bool gives errors using private static bool instead
         private static bool StartCountdown(string message, int seconds)
         {
             Console.Write(message);
@@ -190,3 +192,9 @@ _)      \.___.,|     .'
         }
     }
 }
+
+// problems left to fix
+
+// when guess is not correct sound number and sound answer stay true(correct), but next guess song plays // alternative solution restarting the game completely to avoid next sound playing
+// hi-score scoreboard still needs to be done and has to appear on screen(when)
+// hi-scores need to be stored in a file and saved (not seen yet!)
