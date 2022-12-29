@@ -14,7 +14,7 @@ namespace Sequence_game_Console
     { 
         static void Main(string[] args)
         {
-            string[] sounds = { "bradpittsound.wav", "kanyesound.wav", "christianbalesound.wav", "travissound.wav", "ryanreynoldssound.wav", "asaprocky.wav", "liluzi.wav", "chiefkeefsound.wav", "kawhisound.wav", "tobeymaguire.wav" };
+
             string[] soundAnswers = { "brad pitt", "kanye west", "christian bale", "travis scott", "ryan reynolds", "asap rocky", "lil uzi vert", "chief keef", "kawhi leonard", "tobey maguire" };
 
             int currentSound = 0; // keeps track of the sound that is playing

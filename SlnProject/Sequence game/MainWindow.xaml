@@ -5,21 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sequence_game"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="950">
-    <Grid>
-        <Image Source="images/Tobey maguire.jpg" HorizontalAlignment="Left" Height="141" Margin="33,252,0,0" VerticalAlignment="Top" Width="108" Stretch="UniformToFill"/>
-        <Image Source="/images/travisscott.jpg" HorizontalAlignment="Left" Height="141" Margin="282,252,0,0" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
-        <Image Source="/images/ye.jpg" HorizontalAlignment="Left" Height="141" Margin="282,86,0,0" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
-        <Button Height="141" Width="107" Margin="34,86,809,357" Click="Button_Click">
-            <Image Source="/images/bradpitt.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
+        Title="MainWindow" Height="950" Width="950">
+    <Grid Margin="0,0,0,-6">
+        <Button Height="141" Width="107" Click="Button_Click" Margin="605,278,238,165">
+            <Image Source="/images/travisscott.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
         </Button>
-        <Image Source="/images/kawhileonard.jpg" HorizontalAlignment="Left" Height="141" Margin="543,252,0,0" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
-        <Image Source="/images/sosa300.jpg" HorizontalAlignment="Left" Height="141" Margin="807,252,0,0" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
-        <Image Source="/images/ryanreynolds.jpg" HorizontalAlignment="Left" Height="141" Margin="543,86,0,0" VerticalAlignment="Top" Width="108" Stretch="UniformToFill"/>
-        <Image Source="/images/christianbale.jpg" HorizontalAlignment="Left" Height="141" Margin="807,79,0,0" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
-        <Button x:Name="startBtn" Content="START" HorizontalAlignment="Left" Margin="62,495,0,0" VerticalAlignment="Top" Height="40" Width="142" FontSize="16" FontWeight="DemiBold"/>
-        <Button x:Name="startBtn_Copy" Content="RESTART" HorizontalAlignment="Left" Margin="718,495,0,0" VerticalAlignment="Top" Height="40" Width="142" FontSize="16" FontWeight="DemiBold"/>
+        <Button Height="141" Width="107" Click="Button_Click" Margin="605,88,238,355">
+            <Image Source="/images/ye.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="106" Stretch="UniformToFill"/>
+        </Button>
+        <Button Height="141" Width="107" Margin="34,86,809,357" Click="Button_Click">
+            <Image Source="/images/bradpitt.jpg" HorizontalAlignment="Left" Height="139" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
+        </Button>
+        <Button Height="141" Width="107" Click="Button_Click" Margin="34,278,809,165">
+            <Image Source="images/Tobey maguire.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Center" Width="107" Stretch="UniformToFill"/>
+        </Button>
+        <Button Height="141" Width="107" Click="Button_Click" Margin="789,278,54,165">
+            <Image Source="/images/sosa300.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
+        </Button>
+        <Button Height="141" Width="107" Click="Button_Click" Margin="422,88,422,355">
+            <Image Source="/images/ryanreynolds.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
+        </Button>
+        <Button Height="141" Width="107" Click="Button_Click" Margin="225,88,618,355">
+            <Image Source="/images/christianbale.jpg" HorizontalAlignment="Left" Height="141"  VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
+        </Button>
+        <Button x:Name="startBtn" Content="START" HorizontalAlignment="Left" Margin="34,670,0,0" VerticalAlignment="Top" Height="40" Width="142" FontSize="16" FontWeight="DemiBold" Click="StartBtn_Click"/>
+        <Button x:Name="RestartBtn" Content="RESTART" HorizontalAlignment="Left" Margin="754,670,0,0" VerticalAlignment="Top" Height="40" Width="142" FontSize="16" FontWeight="DemiBold" Click="RestartBtn_Click"/>
         <Label x:Name="Title" Content="Welcome to my sequence game!" HorizontalAlignment="Center" Margin="0,23,0,0" VerticalAlignment="Top" Height="55" Width="394" FontSize="24" FontWeight="Bold"/>
 
+        <Button Height="141" Width="107" Click="Button_Click" Margin="225,278,618,165">
+            <Image Source="/images/asaprocky.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
+        </Button>
+
+        <Button Height="141" Width="107" Click="Button_Click" Margin="422,278,421,165">
+            <Image Source="/images/lil uzi.png" HorizontalAlignment="Center" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
+        </Button>
+
+        <Button Height="141" Width="107" Click="Button_Click" Margin="789,86,54,357">
+            <Image Source="/images/kawhileonard.jpg"  HorizontalAlignment="Center" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
+        </Button>
+        <Button Content="Mute sound" x:Name="MuteButton" HorizontalAlignment="Center" Margin="0,670,0,0" VerticalAlignment="Top" Height="40" Width="168" Click="MuteButton_Click" FontSize="16" FontWeight="SemiBold"></Button>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Center" Margin="0,813,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" Height="25"/>
+        <TextBox x:Name="NumSoundsTextBox" HorizontalAlignment="Center" Margin="0,875,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" Height="25"/>
+        <TextBlock HorizontalAlignment="Left" Margin="250,875,0,0" TextWrapping="Wrap" Text="Enter your name:" VerticalAlignment="Top" Height="25" Width="100"/>
+        <TextBlock HorizontalAlignment="Left" Margin="129,813,0,0" TextWrapping="Wrap" Text="Total sounds you want to generate(8-10):" VerticalAlignment="Top" Height="25" Width="241"/>
     </Grid>
 </Window>

@@ -1,7 +1,7 @@
-﻿using WMPLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,18 +21,83 @@ namespace Sequence_game
     /// </summary>
     public partial class MainWindow : Window
     {
+        private SoundPlayer player;
+        private bool isMuted = false;
+        private string[] sounds = { "bradpittsound.wav", "kanyesound.wav", "christianbalesound.wav", "travissound.wav", "ryanreynoldssound.wav", "asaprocky.wav", "liluzi.wav", "chiefkeefsound.wav", "kawhisound.wav", "tobeymaguire.wav" };
+        private string[] soundAnswers = { "brad pitt", "kanye west", "christian bale", "travis scott", "ryan reynolds", "asap rocky", "lil uzi vert", "chief keef", "kawhi leonard", "tobey maguire" };
+        private int currentSound;
+        private bool gameStarted;
+
         public MainWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
+            this.gameStarted = false;
+
+            this.player = new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game\geluiden\backgroundsound.wav"); // line 48 to 50 looping background sound
+            this.player.Load();
+            this.player.PlayLooping();
+        }
+
+        private List<SoundPlayer> GenerateSounds(int numSounds)
+        {
+            List<SoundPlayer> sound = new List<SoundPlayer>();
+            for (int i = 0; i < numSounds; i++)
+            {
+                SoundPlayer sounds = new SoundPlayer();
+
+                sound.Add(new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\sounds\bradpittsound.wav"));
+                sound.Add(new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\sounds\kanyesound.wav"));
+                sound.Add(new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\sounds\christianbalesound.wav"));
+                sound.Add(new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\sounds\travissound.wav"));
+                sound.Add(new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\sounds\ryanreynoldssound.wav"));
+                sound.Add(new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\sounds\asaprocky.wav"));
+                sound.Add(new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\sounds\liluzi.wav"));
+                sound.Add(new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\sounds\chiefkeefsound.wav"));
+                sound.Add(new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\sounds\kawhisound.wav"));
+                sound.Add(new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\sounds\tobeymaguire.wav"));
+            }
+
+            return sound;
+        }
+
+
+        private void MuteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.isMuted)
+            {
+                this.player.PlayLooping();
+                this.MuteButton.Content = "Mute sound";
+                this.isMuted = false;
+            }
+            else
+            {
+                this.player.Stop();
+                this.MuteButton.Content = "Sound is muted";
+                this.isMuted = true;
+            }
+        }
+
+        private void StartBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string name = this.NameTextBox.Text;
+            int numSounds = int.Parse(this.NumSoundsTextBox.Text);
+
+            this.sounds = this.GenerateSounds(numSounds);
+            this.currentSound = 0;
+
+            this.gameStarted = true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            WindowsMediaPlayer player = new WindowsMediaPlayer();
-            player.URL = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/bradpittsound.mp3");
 
-            player.controls.play();
-            player.settings.volume = 40;
+        }
+
+        private void RestartBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.gameStarted = false;
+            this.currentSound = 0;
+            this.startBtn.IsEnabled = true;
         }
     }
 }
