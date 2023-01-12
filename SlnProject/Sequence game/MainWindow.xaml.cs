@@ -21,17 +21,18 @@ namespace Sequence_game
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string[] sounds;
         private SoundPlayer player;
         private bool isMuted = false;
-        private string[] sounds = { "bradpittsound.wav", "kanyesound.wav", "christianbalesound.wav", "travissound.wav", "ryanreynoldssound.wav", "asaprocky.wav", "liluzi.wav", "chiefkeefsound.wav", "kawhisound.wav", "tobeymaguire.wav" };
-        private string[] soundAnswers = { "brad pitt", "kanye west", "christian bale", "travis scott", "ryan reynolds", "asap rocky", "lil uzi vert", "chief keef", "kawhi leonard", "tobey maguire" };
         private int currentSound;
         private bool gameStarted;
+        private StackPanel soundsStackPanel;
 
         public MainWindow()
         {
             this.InitializeComponent();
             this.gameStarted = false;
+            this.soundsStackPanel = (StackPanel)this.FindName("SoundsStackPanel");
 
             this.player = new SoundPlayer(@"C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game\geluiden\backgroundsound.wav"); // line 48 to 50 looping background sound
             this.player.Load();
@@ -79,18 +80,28 @@ namespace Sequence_game
 
         private void StartBtn_Click(object sender, RoutedEventArgs e)
         {
-            string name = this.NameTextBox.Text;
-            int numSounds = int.Parse(this.NumSoundsTextBox.Text);
-
-            this.sounds = this.GenerateSounds(numSounds);
             this.currentSound = 0;
-
             this.gameStarted = true;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Button button = (Button)sender;
 
+            if (button.Tag.ToString() == this.sounds[this.currentSound])
+            {
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "geluiden/cheering.wav");
+                SoundPlayer cheer = new SoundPlayer(path);
+                cheer.Load();
+                cheer.PlaySync();
+            }
+            else
+            {
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "geluiden/laugh.wav");
+                SoundPlayer laugh = new SoundPlayer(path);
+                laugh.Load();
+                laugh.PlaySync();
+            }
         }
 
         private void RestartBtn_Click(object sender, RoutedEventArgs e)
@@ -98,6 +109,11 @@ namespace Sequence_game
             this.gameStarted = false;
             this.currentSound = 0;
             this.startBtn.IsEnabled = true;
+        }
+
+        private void ReadyBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

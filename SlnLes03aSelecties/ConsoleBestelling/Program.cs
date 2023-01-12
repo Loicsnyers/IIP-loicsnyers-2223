@@ -68,22 +68,23 @@ Kies je pizza");
                 sizePrice = (20 * menuPrice) / 100;
                 Convert.ToDouble(menuPrice + sizePrice);
             }
+
             Console.WriteLine();
             Console.Write("thuis bezorgen (3 euro extra)? ja/nee:");
             var deliveryOption = Console.ReadLine();
             double totalPrice = menuPrice + sizePrice;
 
             bool delivery = false;
-            if (deliveryOption == "ja") 
+            if (deliveryOption == "ja")
             {
                 totalPrice += 3;
-                delivery= true; 
+                delivery= true;
 
             }
-            else if (deliveryOption == "nee") 
+            else if (deliveryOption == "nee")
             {
                 totalPrice += 0;
-                delivery= false;
+                delivery = false;
             }
 
             if (delivery)

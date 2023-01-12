@@ -195,6 +195,4 @@ _)      \.___.,|     .'
 
 // problems left to fix
 
-// when guess is not correct sound number and sound answer stay true(correct), but next guess song plays // alternative solution restarting the game completely to avoid next sound playing
-// hi-score scoreboard still needs to be done and has to appear on screen(when)
 // hi-scores need to be stored in a file and saved (not seen yet!)

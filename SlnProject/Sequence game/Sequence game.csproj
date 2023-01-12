@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Sound.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -97,9 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\travisscott.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\Tobey maguire.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\ye.jpg" />
@@ -181,6 +179,7 @@
     <Content Include="geluiden\travissound.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="images\Tobey.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

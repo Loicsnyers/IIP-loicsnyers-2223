@@ -6,47 +6,42 @@
         xmlns:local="clr-namespace:Sequence_game"
         mc:Ignorable="d"
         Title="MainWindow" Height="950" Width="950">
-    <Grid Margin="0,0,0,-6">
-        <Button Height="141" Width="107" Click="Button_Click" Margin="605,278,238,165">
-            <Image Source="/images/travisscott.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
+
+    <Grid>
+        <Button Click="Button_Click" Margin="605,47,238,175">
+            <Image Source="/images/travisscott.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill" />
         </Button>
-        <Button Height="141" Width="107" Click="Button_Click" Margin="605,88,238,355">
-            <Image Source="/images/ye.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="106" Stretch="UniformToFill"/>
+        <Button Click="Button_Click" Margin="605,256,238,2">
+            <Image Source="/images/ye.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
         </Button>
-        <Button Height="141" Width="107" Margin="34,86,809,357" Click="Button_Click">
-            <Image Source="/images/bradpitt.jpg" HorizontalAlignment="Left" Height="139" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
+        <Button Margin="34,796,809,4" Click="Button_Click">
+            <Image Source="/images/bradpitt.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
         </Button>
-        <Button Height="141" Width="107" Click="Button_Click" Margin="34,278,809,165">
-            <Image Source="images/Tobey maguire.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Center" Width="107" Stretch="UniformToFill"/>
+        <Button Click="Button_Click" Margin="34,184,809,611">
+            <Image Source="images/Tobey.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Center" Width="107" Stretch="UniformToFill"/>
         </Button>
-        <Button Height="141" Width="107" Click="Button_Click" Margin="789,278,54,165">
+        <Button Click="Button_Click" Margin="789,47,54,175">
             <Image Source="/images/sosa300.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
         </Button>
-        <Button Height="141" Width="107" Click="Button_Click" Margin="422,88,422,355">
+        <Button Click="Button_Click" Margin="422,256,421,2">
             <Image Source="/images/ryanreynolds.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
         </Button>
-        <Button Height="141" Width="107" Click="Button_Click" Margin="225,88,618,355">
+        <Button Click="Button_Click" Margin="225,256,618,2">
             <Image Source="/images/christianbale.jpg" HorizontalAlignment="Left" Height="141"  VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
         </Button>
-        <Button x:Name="startBtn" Content="START" HorizontalAlignment="Left" Margin="34,670,0,0" VerticalAlignment="Top" Height="40" Width="142" FontSize="16" FontWeight="DemiBold" Click="StartBtn_Click"/>
-        <Button x:Name="RestartBtn" Content="RESTART" HorizontalAlignment="Left" Margin="754,670,0,0" VerticalAlignment="Top" Height="40" Width="142" FontSize="16" FontWeight="DemiBold" Click="RestartBtn_Click"/>
-        <Label x:Name="Title" Content="Welcome to my sequence game!" HorizontalAlignment="Center" Margin="0,23,0,0" VerticalAlignment="Top" Height="55" Width="394" FontSize="24" FontWeight="Bold"/>
-
-        <Button Height="141" Width="107" Click="Button_Click" Margin="225,278,618,165">
+        <Button Click="Button_Click" Margin="225,47,618,175">
             <Image Source="/images/asaprocky.jpg" HorizontalAlignment="Left" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
         </Button>
-
-        <Button Height="141" Width="107" Click="Button_Click" Margin="422,278,421,165">
+        <Button Click="Button_Click" Margin="422,47,421,175">
             <Image Source="/images/lil uzi.png" HorizontalAlignment="Center" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
         </Button>
-
-        <Button Height="141" Width="107" Click="Button_Click" Margin="789,86,54,357">
+        <Button Click="Button_Click" Margin="789,254,54,4">
             <Image Source="/images/kawhileonard.jpg"  HorizontalAlignment="Center" Height="141" VerticalAlignment="Top" Width="107" Stretch="UniformToFill"/>
         </Button>
-        <Button Content="Mute sound" x:Name="MuteButton" HorizontalAlignment="Center" Margin="0,670,0,0" VerticalAlignment="Top" Height="40" Width="168" Click="MuteButton_Click" FontSize="16" FontWeight="SemiBold"></Button>
-        <TextBox x:Name="NameTextBox" HorizontalAlignment="Center" Margin="0,813,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" Height="25"/>
-        <TextBox x:Name="NumSoundsTextBox" HorizontalAlignment="Center" Margin="0,875,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="210" Height="25"/>
-        <TextBlock HorizontalAlignment="Left" Margin="250,875,0,0" TextWrapping="Wrap" Text="Enter your name:" VerticalAlignment="Top" Height="25" Width="100"/>
-        <TextBlock HorizontalAlignment="Left" Margin="129,813,0,0" TextWrapping="Wrap" Text="Total sounds you want to generate(8-10):" VerticalAlignment="Top" Height="25" Width="241"/>
+
+        <Button x:Name="startBtn" Content="START" HorizontalAlignment="Left" Margin="34,270,0,0" VerticalAlignment="Top" Height="40" Width="142" FontSize="16" FontWeight="DemiBold" Click="StartBtn_Click"/>
+        <Button x:Name="RestartBtn" Content="RESTART" HorizontalAlignment="Left" Margin="754,270,0,0" VerticalAlignment="Top" Height="40" Width="142" FontSize="16" FontWeight="DemiBold" Click="RestartBtn_Click"/>
+        <Label x:Name="Title" Content="Welcome to my sequence game!" HorizontalAlignment="Center" Margin="0,51,0,0" VerticalAlignment="Top" Height="55" Width="394" FontSize="24" FontWeight="Bold"/>
+        <Button Content="Mute sound" x:Name="MuteButton" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top" Height="40" Width="168" Click="MuteButton_Click" FontSize="16" FontWeight="SemiBold"></Button>
     </Grid>
 </Window>
