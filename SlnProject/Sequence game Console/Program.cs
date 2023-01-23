@@ -60,10 +60,10 @@ All rights and credit go directly to its rightful owners");
             Console.ForegroundColor = ConsoleColor.Magenta;
 
             Console.WriteLine();
-            Console.WriteLine(@"Game features ||
+            Console.WriteLine(@"Game's features ||
 - You'll have the choice to generate 8 to 10 sounds.
-- Each time you make a correct guess a cheering sound will play.
-- If you fail to guess correctly a laughing sound will play.
+- Each time you make a correct guess your score augments by 25.
+- If you fail to guess correctly your score is decreased by 25.
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
             Console.WriteLine();
