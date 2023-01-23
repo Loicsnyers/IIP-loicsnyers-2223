@@ -28,9 +28,14 @@ namespace WPF_sequence
         int correctGuesses = 0;
         int numberOfElements;
         List<SoundPlayer> sound = new List<SoundPlayer>();
-        
 
-        
+        // These sounds are under Fair Use:
+        // Copyright Disclaimer Under Section 107 of the Copyright Act in 1976; Allowance is made for
+        // 'Fair Use' for purposes such as criticism, comment, news reporting, teaching, scholarship, and research.
+        // Fair use is a use permitted by copyright statute that might otherwise be infringing.
+        // Non - profit, educational or personal use tips the balance in favor of fair use.
+        // All rights and credit go directly to its rightful owners.
+
         public MainWindow()
         {
             InitializeComponent();
@@ -54,7 +59,7 @@ namespace WPF_sequence
             restartBtn.IsEnabled = false;
         }
 
-        private bool ValidateInput(string name, int value)
+        private static bool ValidateInput(string name, int value)
         {
             if (string.IsNullOrEmpty(name) || value < 8 || value > 10)
             {
@@ -392,13 +397,14 @@ namespace WPF_sequence
                 currentSound--;
                 restartBtn.IsEnabled = true;
             }
-            if (correctGuesses == currentSound)
+            if (CheckGuess(correctGuesses, currentSound))
             {
                 string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/victory.wav");
                 SoundPlayer victory = new SoundPlayer(path);
                 victory.Load();
                 victory.PlaySync();
                 MessageBox.Show("You won!");
+                Environment.Exit(0); 
             }
         }
 
@@ -423,13 +429,14 @@ namespace WPF_sequence
                 currentSound--;
                 restartBtn.IsEnabled = true;
             }
-            if (correctGuesses == currentSound)
+            if (CheckGuess(correctGuesses, currentSound))
             {
                 string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/victory.wav");
                 SoundPlayer victory = new SoundPlayer(path);
                 victory.Load();
                 victory.PlaySync();
                 MessageBox.Show("You won!");
+                Environment.Exit(0);
             }
         }
 
@@ -454,13 +461,26 @@ namespace WPF_sequence
                 currentSound--;
                 restartBtn.IsEnabled = true;
             }
-            if (correctGuesses == currentSound)
+            if (CheckGuess(correctGuesses, currentSound))
             {
                 string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/victory.wav");
                 SoundPlayer victory = new SoundPlayer(path);
                 victory.Load();
                 victory.PlaySync();
                 MessageBox.Show("You won!");
+                Environment.Exit(0);
+            }
+        }
+
+        private static bool CheckGuess(int correctGuesses, int currentSound)
+        {
+            if (correctGuesses == currentSound)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
