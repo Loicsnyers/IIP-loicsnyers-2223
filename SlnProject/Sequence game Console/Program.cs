@@ -196,7 +196,7 @@ _)      \.___.,|     .'
         {
             Console.WriteLine("Top 5 Scores:");
 
-            string[] lines = File.ReadAllLines("Scores.txt");
+            string[] lines = File.ReadAllLines("Scores.txt"); // the scores.txt file is stored in this filepath C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\WPF sequence\bin\Debug
             var topScores = lines
                 .Select(line => line.Split())
                 .OrderByDescending(parts => int.Parse(parts[1])) // shows the scores by descending meaning from best score to worst one

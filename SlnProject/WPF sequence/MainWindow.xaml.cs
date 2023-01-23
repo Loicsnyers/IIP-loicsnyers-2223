@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -16,11 +17,13 @@ using System.Windows.Shapes;
 
 namespace WPF_sequence
 {
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int score;
         private int numSounds;
         private bool isMuted = false;
         SoundPlayer player = new SoundPlayer();
@@ -223,6 +226,7 @@ namespace WPF_sequence
                 SoundPlayer cheer = new SoundPlayer(path);
                 cheer.Load();
                 cheer.PlaySync();
+                score += 25;
                 currentSound++;
                 correctGuesses++;
                 sound[currentSound].Play();
@@ -233,8 +237,10 @@ namespace WPF_sequence
                 SoundPlayer laugh = new SoundPlayer(path);
                 laugh.Load();
                 laugh.PlaySync();
+                score -= 25;
                 currentSound--;
                 restartBtn.IsEnabled = true;
+                SaveScore();
             }
         }
 
@@ -246,6 +252,7 @@ namespace WPF_sequence
                 SoundPlayer cheer = new SoundPlayer(path);
                 cheer.Load();
                 cheer.PlaySync();
+                score += 25;
                 currentSound++;
                 correctGuesses++;
                 sound[currentSound].Play();
@@ -256,8 +263,10 @@ namespace WPF_sequence
                 SoundPlayer laugh = new SoundPlayer(path);
                 laugh.Load();
                 laugh.PlaySync();
+                score -= 25;
                 currentSound--;
                 restartBtn.IsEnabled = true;
+                SaveScore();
             }
         }
 
@@ -269,6 +278,7 @@ namespace WPF_sequence
                 SoundPlayer cheer = new SoundPlayer(path);
                 cheer.Load();
                 cheer.PlaySync();
+                score += 25;
                 currentSound++;
                 correctGuesses++;
                 sound[currentSound].Play();
@@ -279,8 +289,10 @@ namespace WPF_sequence
                 SoundPlayer laugh = new SoundPlayer(path);
                 laugh.Load();
                 laugh.PlaySync();
+                score -= 25;
                 currentSound--;
                 restartBtn.IsEnabled = true;
+                SaveScore();
             }
         }
 
@@ -292,6 +304,7 @@ namespace WPF_sequence
                 SoundPlayer cheer = new SoundPlayer(path);
                 cheer.Load();
                 cheer.PlaySync();
+                score += 25;
                 currentSound++;
                 correctGuesses++;
                 sound[currentSound].Play();
@@ -302,8 +315,10 @@ namespace WPF_sequence
                 SoundPlayer laugh = new SoundPlayer(path);
                 laugh.Load();
                 laugh.PlaySync();
+                score -= 25;
                 currentSound--;
                 restartBtn.IsEnabled = true;
+                SaveScore();
             }
         }
 
@@ -315,6 +330,7 @@ namespace WPF_sequence
                 SoundPlayer cheer = new SoundPlayer(path);
                 cheer.Load();
                 cheer.PlaySync();
+                score += 25;
                 currentSound++;
                 correctGuesses++;
                 sound[currentSound].Play();
@@ -325,8 +341,10 @@ namespace WPF_sequence
                 SoundPlayer laugh = new SoundPlayer(path);
                 laugh.Load();
                 laugh.PlaySync();
+                score -= 25;
                 currentSound--;
                 restartBtn.IsEnabled = true;
+                SaveScore();
             }
         }
 
@@ -338,6 +356,7 @@ namespace WPF_sequence
                 SoundPlayer cheer = new SoundPlayer(path);
                 cheer.Load();
                 cheer.PlaySync();
+                score += 25;
                 currentSound++;
                 correctGuesses++;
                 sound[currentSound].Play();
@@ -348,8 +367,10 @@ namespace WPF_sequence
                 SoundPlayer laugh = new SoundPlayer(path);
                 laugh.Load();
                 laugh.PlaySync();
+                score -= 25;
                 currentSound--;
                 restartBtn.IsEnabled = true;
+                SaveScore();
             }
         }
 
@@ -361,6 +382,7 @@ namespace WPF_sequence
                 SoundPlayer cheer = new SoundPlayer(path);
                 cheer.Load();
                 cheer.PlaySync();
+                score += 25;
                 currentSound++;
                 correctGuesses++;
                 sound[currentSound].Play();
@@ -371,8 +393,10 @@ namespace WPF_sequence
                 SoundPlayer laugh = new SoundPlayer(path);
                 laugh.Load();
                 laugh.PlaySync();
+                score -= 25;
                 currentSound--;
                 restartBtn.IsEnabled = true;
+                SaveScore();
             }
         }
 
@@ -384,6 +408,7 @@ namespace WPF_sequence
                 SoundPlayer cheer = new SoundPlayer(path);
                 cheer.Load();
                 cheer.PlaySync();
+                score += 25;
                 currentSound++;
                 correctGuesses++;
                 sound[currentSound].Play();
@@ -394,8 +419,10 @@ namespace WPF_sequence
                 SoundPlayer laugh = new SoundPlayer(path);
                 laugh.Load();
                 laugh.PlaySync();
+                score -= 25;
                 currentSound--;
                 restartBtn.IsEnabled = true;
+                SaveScore();
             }
             if (CheckGuess(correctGuesses, currentSound))
             {
@@ -416,6 +443,7 @@ namespace WPF_sequence
                 SoundPlayer cheer = new SoundPlayer(path);
                 cheer.Load();
                 cheer.PlaySync();
+                score += 25;
                 currentSound++;
                 correctGuesses++;
                 sound[currentSound].Play();
@@ -426,8 +454,10 @@ namespace WPF_sequence
                 SoundPlayer laugh = new SoundPlayer(path);
                 laugh.Load();
                 laugh.PlaySync();
+                score -= 25;
                 currentSound--;
                 restartBtn.IsEnabled = true;
+                SaveScore();
             }
             if (CheckGuess(correctGuesses, currentSound))
             {
@@ -448,6 +478,7 @@ namespace WPF_sequence
                 SoundPlayer cheer = new SoundPlayer(path);
                 cheer.Load();
                 cheer.PlaySync();
+                score += 25;
                 currentSound++;
                 correctGuesses++;
                 sound[currentSound].Play();
@@ -458,8 +489,10 @@ namespace WPF_sequence
                 SoundPlayer laugh = new SoundPlayer(path);
                 laugh.Load();
                 laugh.PlaySync();
+                score -= 25;
                 currentSound--;
                 restartBtn.IsEnabled = true;
+                SaveScore();
             }
             if (CheckGuess(correctGuesses, currentSound))
             {
@@ -471,6 +504,34 @@ namespace WPF_sequence
                 Environment.Exit(0);
             }
         }
+
+        private async void SaveScore()
+        {
+            using (StreamWriter sw = new StreamWriter("Scores.txt", true))
+            {
+                sw.WriteLine("{0} {1}", nameTextBox.Text, score);
+            }
+            ShowTopScores();
+        }
+
+        private void ShowTopScores()
+        {
+            string[] lines = File.ReadAllLines("Scores.txt");
+            var topScores = lines
+                .Where(line => line.Contains(','))
+                .Select(line => line.Split(','))
+                .Select(parts => new { Name = parts[0], Score = int.Parse(parts[1]) })
+                .OrderByDescending(score => score.Score)  
+                .Take(5)
+                .ToList();
+
+            for (int i = 0; i < topScores.Count; i++)
+            {
+                ScoreBoard.Items.Add(topScores[i].Name + " " + topScores[i].Score); // the Scores.txt file is stored in this filepath C:\Users\loics\source\repos\Loicsnyers\IIP-loicsnyers-2223\SlnProject\Sequence game Console\bin\Debug
+                // the file Scores.txt reads the name and score correctly but fails to wirte it in a listbox.
+            }
+        }
+
 
         private static bool CheckGuess(int correctGuesses, int currentSound)
         {

@@ -13,29 +13,30 @@
         <TextBox x:Name="numSoundsTextBox" TextChanged="numSoundsTextBox_TextChanged" HorizontalAlignment="Left" Margin="278,469,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="120"/>
         <Button x:Name="advanceBtn" Content="ADVANCE" HorizontalAlignment="Left" Margin="403,443,0,0" VerticalAlignment="Top" Height="35" Width="125" FontSize="16" FontWeight="SemiBold" Click="advanceBtn_Click"/>
         <Button x:Name="MuteButton" Content="Mute sound" HorizontalAlignment="Center" Margin="0,519,0,0" VerticalAlignment="Top" Height="25" Width="166" FontSize="16" FontWeight="SemiBold" Click="MuteButton_Click" Visibility="Visible"/>
-        <Image x:Name="_0" Source="images/0.jpg" HorizontalAlignment="Left" Height="136" Margin="178,188,0,0" VerticalAlignment="Top" Width="115" Stretch="UniformToFill" Visibility="Visible"/>
-        <Image x:Name="_1" Source="images/1.jpg" HorizontalAlignment="Left" Height="136" Margin="513,188,0,0" VerticalAlignment="Top" Width="114" Stretch="UniformToFill" Visibility="Visible"/>
-        <Image x:Name="_2" Source="images/2.jpg" HorizontalAlignment="Center" Height="136" Margin="0,8,0,0" VerticalAlignment="Top" Width="116" Stretch="UniformToFill" Visibility="Visible"/>
-        <Image x:Name="_3" Source="images/3.jpg" HorizontalAlignment="Left" Height="136" Margin="513,8,0,0" VerticalAlignment="Top" Width="114" Stretch="UniformToFill" Visibility="Visible"/>
-        <Image x:Name="_4" Source="images/4.jpg" HorizontalAlignment="Left" Height="136" Margin="10,8,0,0" VerticalAlignment="Top" Width="114" Stretch="UniformToFill" Visibility="Visible"/>
-        <Image x:Name="_5" Source="images/5.jpg" HorizontalAlignment="Left" Height="136" Margin="10,188,0,0" VerticalAlignment="Top" Width="115" Stretch="UniformToFill" Visibility="Visible"/>
-        <Image x:Name="_6" Source="images/6.jpg" HorizontalAlignment="Left" Height="136" Margin="675,10,0,0" VerticalAlignment="Top" Width="115" Stretch="UniformToFill" Visibility="Visible"/>
-        <Image x:Name="_7" Source="images/7.jpg" HorizontalAlignment="Center" Height="136" Margin="0,188,0,0" VerticalAlignment="Top" Width="116" Stretch="UniformToFill" Visibility="Visible"/>
-        <Image x:Name="_8" Source="images/8.jpg" HorizontalAlignment="Left" Height="136" Margin="178,8,0,0" VerticalAlignment="Top" Width="116" Stretch="UniformToFill" Visibility="Visible"/>
-        <Image x:Name="_9" Source="images/9.jpg" HorizontalAlignment="Left" Height="136" Margin="675,188,0,0" VerticalAlignment="Top" Width="115" Stretch="UniformToFill" Visibility="Visible"/>
-        <Button x:Name="btn0" Content="Guess" HorizontalAlignment="Left" Margin="185,331,0,0" VerticalAlignment="Top" Width="100"  Click="btn0_Click" Visibility="Visible"/>
-        <Button x:Name="btn1" Content="Guess" HorizontalAlignment="Left" Margin="522,331,0,0" VerticalAlignment="Top" Width="100" Click="btn1_Click" Visibility="Visible"/>
-        <Button x:Name="btn2" Content="Guess" HorizontalAlignment="Center" Margin="0,152,0,0" VerticalAlignment="Top" Width="100" Click="btn2_Click" Visibility="Visible"/>
-        <Button x:Name="btn3" Content="Guess" HorizontalAlignment="Left" Margin="522,152,0,0" VerticalAlignment="Top" Width="100" Click="btn3_Click" Visibility="Visible"/>
-        <Button x:Name="btn4" Content="Guess" HorizontalAlignment="Left" Margin="17,152,0,0" VerticalAlignment="Top" Width="100" Click="btn4_Click" Visibility="Visible"/>
-        <Button x:Name="btn5" Content="Guess" HorizontalAlignment="Left" Margin="18,331,0,0" VerticalAlignment="Top" Width="100"  Click="btn5_Click" Visibility="Visible"/>
-        <Button x:Name="btn6" Content="Guess" HorizontalAlignment="Left" Margin="682,152,0,0" VerticalAlignment="Top" Width="100" Click="btn6_Click" Visibility="Visible"/>
-        <Button x:Name="btn7" Content="Guess" HorizontalAlignment="Center" Margin="0,331,0,0" VerticalAlignment="Top" Width="100" Click="btn7_Click" Visibility="Visible"/>
-        <Button x:Name="btn8" Content="Guess" HorizontalAlignment="Left" Margin="186,152,0,0" VerticalAlignment="Top" Width="100" Click="btn8_Click" Visibility="Visible"/>
-        <Button x:Name="btn9" Content="Guess" HorizontalAlignment="Left" Margin="682,331,0,0" VerticalAlignment="Top" Width="100" Click="btn9_Click" Visibility="Visible"/>
+        <Image x:Name="_0" Source="images/0.jpg" HorizontalAlignment="Left" Height="136" Margin="178,188,0,0" VerticalAlignment="Top" Width="115" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <Image x:Name="_1" Source="images/1.jpg" HorizontalAlignment="Left" Height="136" Margin="513,188,0,0" VerticalAlignment="Top" Width="114" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <Image x:Name="_2" Source="images/2.jpg" HorizontalAlignment="Center" Height="136" Margin="0,8,0,0" VerticalAlignment="Top" Width="116" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <Image x:Name="_3" Source="images/3.jpg" HorizontalAlignment="Left" Height="136" Margin="513,8,0,0" VerticalAlignment="Top" Width="114" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <Image x:Name="_4" Source="images/4.jpg" HorizontalAlignment="Left" Height="136" Margin="10,8,0,0" VerticalAlignment="Top" Width="114" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <Image x:Name="_5" Source="images/5.jpg" HorizontalAlignment="Left" Height="136" Margin="10,188,0,0" VerticalAlignment="Top" Width="115" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <Image x:Name="_6" Source="images/6.jpg" HorizontalAlignment="Left" Height="136" Margin="675,10,0,0" VerticalAlignment="Top" Width="115" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <Image x:Name="_7" Source="images/7.jpg" HorizontalAlignment="Center" Height="136" Margin="0,188,0,0" VerticalAlignment="Top" Width="116" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <Image x:Name="_8" Source="images/8.jpg" HorizontalAlignment="Left" Height="136" Margin="178,8,0,0" VerticalAlignment="Top" Width="116" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <Image x:Name="_9" Source="images/9.jpg" HorizontalAlignment="Left" Height="136" Margin="675,188,0,0" VerticalAlignment="Top" Width="115" Stretch="UniformToFill" Visibility="Collapsed"/>
+        <Button x:Name="btn0" Content="Guess" HorizontalAlignment="Left" Margin="185,331,0,0" VerticalAlignment="Top" Width="100"  Click="btn0_Click" Visibility="Collapsed"/>
+        <Button x:Name="btn1" Content="Guess" HorizontalAlignment="Left" Margin="522,331,0,0" VerticalAlignment="Top" Width="100" Click="btn1_Click" Visibility="Collapsed"/>
+        <Button x:Name="btn2" Content="Guess" HorizontalAlignment="Center" Margin="0,152,0,0" VerticalAlignment="Top" Width="100" Click="btn2_Click" Visibility="Collapsed"/>
+        <Button x:Name="btn3" Content="Guess" HorizontalAlignment="Left" Margin="522,152,0,0" VerticalAlignment="Top" Width="100" Click="btn3_Click" Visibility="Collapsed"/>
+        <Button x:Name="btn4" Content="Guess" HorizontalAlignment="Left" Margin="17,152,0,0" VerticalAlignment="Top" Width="100" Click="btn4_Click" Visibility="Collapsed"/>
+        <Button x:Name="btn5" Content="Guess" HorizontalAlignment="Left" Margin="18,331,0,0" VerticalAlignment="Top" Width="100"  Click="btn5_Click" Visibility="Collapsed"/>
+        <Button x:Name="btn6" Content="Guess" HorizontalAlignment="Left" Margin="682,152,0,0" VerticalAlignment="Top" Width="100" Click="btn6_Click" Visibility="Collapsed"/>
+        <Button x:Name="btn7" Content="Guess" HorizontalAlignment="Center" Margin="0,331,0,0" VerticalAlignment="Top" Width="100" Click="btn7_Click" Visibility="Collapsed"/>
+        <Button x:Name="btn8" Content="Guess" HorizontalAlignment="Left" Margin="186,152,0,0" VerticalAlignment="Top" Width="100" Click="btn8_Click" Visibility="Collapsed"/>
+        <Button x:Name="btn9" Content="Guess" HorizontalAlignment="Left" Margin="682,331,0,0" VerticalAlignment="Top" Width="100" Click="btn9_Click" Visibility="Collapsed"/>
         <Button x:Name="playBtn" Content="PLAY" HorizontalAlignment="Left" Margin="234,369,0,0" VerticalAlignment="Top" Height="35" Width="105" FontWeight="SemiBold" FontSize="16" Click="playBtn_Click"/>
         <Button x:Name="restartBtn" Content="RESTART" HorizontalAlignment="Left" Margin="466,369,0,0" VerticalAlignment="Top" Height="35" Width="104" FontWeight="SemiBold" FontSize="16" Click="restartBtn_Click"/>
         <Label x:Name="disc" Content="Disclaimer: No copyright infringement intended, sounds and pictures belong to the rightful owners !" HorizontalAlignment="Center" Height="40" Margin="0,584,0,0" VerticalAlignment="Top" Width="654" FontSize="14" FontWeight="DemiBold"/>
+        <ListBox x:Name="ScoreBoard" Margin="595,452,20,66"/>
 
     </Grid>
 </Window>
