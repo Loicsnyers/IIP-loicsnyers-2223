@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B8479090-A289-4843-ADA6-7CBE6E6B5D51}</ProjectGuid>
+    <ProjectGuid>{7A10EE0C-C74A-426E-A25F-C6F1D84802C0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleFibonacci</RootNamespace>
-    <AssemblyName>ConsoleFibonacci</AssemblyName>
+    <RootNamespace>ConsoleCsv</RootNamespace>
+    <AssemblyName>ConsoleCsv</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
